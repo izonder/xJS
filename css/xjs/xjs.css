@@ -1,0 +1,78 @@
+body {
+	font: normal 10px Arial;
+}
+
+.-xjs-icon { display: inline-block; width: 16px; height: 16px; background-image: url(images/ui-icons_9c9c9c_256x240.png); }
+.-xjs-icon:hover { background-image: url(images/ui-icons_454545_256x240.png); }
+
+.-xjs-icon-circle-close { background-position: -32px -192px; }
+.-xjs-icon-refresh { background-position: -64px -80px; }
+.-xjs-icon-star { background-position: -224px -112px; }
+.-xjs-icon-close { background-position: -80px -128px; }
+.-xjs-icon-check { background-position: -64px -144px; }
+.-xjs-icon-pencil { background-position: -64px -112px; }
+.-xjs-icon-loading {
+	min-width: 16px;
+	min-height: 16px; 
+	background: white url('images/ui-anim_basic_16x16.gif') left top no-repeat; 
+}
+
+.-xjs-tooltip {
+	position: relative;
+}
+
+.-xjs-tooltip:hover:before {
+	content: attr(data-title);
+	white-space: pre-line;
+	position: absolute;
+	color: #fff;
+	font: normal 12px Arial;
+	text-align: center;
+	background-color: #222;
+	/*top: 30px;*/
+	bottom: 100%;
+	margin-bottom: 8px;
+	left: 50%;
+	z-index: 999;
+	width: 90px;
+	margin-left: -55px;
+	padding: 10px;
+}
+
+.-xjs-tooltip:hover:after {
+	content: "";
+	position: absolute;
+	z-index: 1000;
+	/*top: 22px;*/
+	bottom: 100%;
+	left: 50%;
+	margin-left: -8px;
+	border-top: 8px solid #222;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 0;
+}
+
+.-xjs-textfield, .-xjs-extra {
+	display: inline-block;
+	position: relative;
+}
+
+.-xjs-textfield-control, .-xjs-extra-control {
+	display: block;
+	float: right;
+	position: relative;
+	margin-top: 2px;
+	/*position: absolute;
+	top: 0;
+	left: 100%;
+	z-index: 1;
+	width: 100%; */
+}
+
+input + .-xjs-textfield-control {
+	margin-left: -16px;
+	/*top: 50%;	
+	margin-top: -8px;
+	margin-left: -16px; */
+}
